@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3 "
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Med|memo</title>
+  </head>
+  <header>
+    <nav
+      class="navbar navbar-expand-sm bg-light bg-gradient navbar-light fixed-top border-bottom border-success"
+    >
+      <div class="container">
+        <a href="index.html" class="navbar-brand"
+          ><img class="w-50" src="logo.png" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="navbar-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="navbar-item">
+              <a href="#" class="nav-link">Contact Us</a>
+            </li>
+            <li class="navbar-item active">
+              <a href="sign in.html" class="nav-link">Log in|Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <body class="regs">
+    <!-- modal for Patient -->
+    <div
+      class="modal fade"
+      id="apply"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              Registration form
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="mb-3">
+                <label for="Patientid" class="col-form-label"
+                  >Patient ID:</label
+                >
+                <input type="text" class="form-control" id="Patientid" />
+              </div>
+              <div class="mb-3">
+                <label for="name" class="col-form-label">Name:</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="DOB" class="col-form-label">Date Of Birth:</label>
+                <input type="date" class="form-control" id="DOB" />
+              </div>
+              <div class="mb-3">
+                <label for="Password" class="col-form-label">Password:</label>
+                <input type="password" class="form-control" id="Password" />
+              </div>
+              <div class="mb-3">
+                <label for="Cpassword" class="col-form-label"
+                  >Confirm Password:</label
+                >
+                <input type="password" class="form-control" id="Cpassword" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal for doctors -->
+    <div
+      class="modal1 fade"
+      id="apply"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <!-- <div class="modal1-dialog">
+        <div class="modal1-content">
+          <div class="modal1-header">
+            <h5 class="modal1-title" id="exampleModalLabel">
+              Registration form
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal1-body">
+            <form action="#">
+              <div class="mb-3">
+                <label for="Doctorid" class="col-form-label">Doctor ID:</label>
+                <input type="text" class="form-control" id="Patientid" />
+              </div>
+              <div class="mb-3">
+                <label for="name" class="col-form-label">Name:</label>
+                <input type="text" class="form-control" id="name" />
+              </div>
+              <div class="mb-3">
+                <label for="Password" class="col-form-label">Password:</label>
+                <input type="password" class="form-control" id="Password" />
+              </div>
+              <div class="mb-3">
+                <label for="Cpassword" class="col-form-label"
+                  >Confirm Password:</label
+                >
+                <input type="password" class="form-control" id="Cpassword" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal1"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal1"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <section class="bg-light text-dark p-5 text-start text-lg-start">
+      <div class="container">
+        <div class="d-sm-flex justify-content-between">
+          <div class="mar">
+            <h2>A modern way to track your health</h2>
+            <p class="lead me-5">
+              A free service that manages your health information by safely
+              storing your medical report and keeping track of your medication
+              regimen. By scanning your medical QR code, Medmemo offers a
+              simpler way for your doctor to access your health information,
+              produce a new report medicine schedule.
+            </p>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block mx-1 mt-5"
+            src="p1.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <h3 class="exp">Explore More</h3>
+      <div class="container">
+        <h2 class="pe-5 me-4 text-end text-lg-end" >Medical Report</h2>
+        <div class="justify-content-between d-sm-flex ">
+          <div class="mar1">
+            <p class="lead me-5 mt-5">
+              Every health concern you have ever had or will ever 
+              have can be stored in the Medical Report.
+            </p>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block mx-1"
+            src="h1.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="pe-5">Medicine Schedule</h2>
+        <div class="d-sm-flex justify-content-between">
+          
+            <img
+            class="img-fluid w-25 d-none d-sm-block mx-1 mt-5"
+            src="h2.png"
+            alt=""
+          />
+          <div class="mar">
+            <p class="lead me-5 ms-5 text-start">
+              Viewing the doctor-generated medication schedule allows you to 
+              keep track of which 
+              medications to take when, for which diseases, and at what times.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2 class="pe-5 me-4 text-end text-lg-end" >Generate QR Code</h2>
+        <div class="justify-content-between d-sm-flex ">
+          <div class="mar1">
+            <p class="lead me-5 mt-5">
+              To make life easier for both the patient and the doctor,
+               a user can build or generate their own customized medical QR code. 
+               The health information of his patient is 
+              immediately accessible to the doctor after scanning the QR code.
+            </p>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block mx-1"
+            src="h3.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+  </body>
+  <div class="container my-5">
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-dark"
+          
+          >
+    <!-- Section: Links  -->
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+            <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: rgba(56, 98, 0, 255); height: 2px"
+                />
+            <p><i class="fa fa-envelope mr-3"></i> medme@gmail.com</p>
+            <p><i class="fa fa-phone mr-3"></i> +97517382614</p>
+          </div>
+          <!-- Grid column -->
+            <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold">Contact</h6>
+            <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: rgba(56, 98, 0, 255); height: 2px"
+                />
+            <p><i class="fa fa-facebook mr-3"></i>&nbspMedmemo</p>
+            <p><i class="fa fa-instagram mr-3"></i>&nbspMedmemo_service</p>
+            <p><i class="fa fa-twitter mr-3"></i>&nbspMedmemo</p>
+          </div>
+          <!-- Grid column -->
+
+          
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         >
+      © 2022 Copyright:
+      <a class="text-dark" href="index.html"
+         >Med|memo</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p "
+    crossorigin="anonymous"
+  ></script>
+</html>
